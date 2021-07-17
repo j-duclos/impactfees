@@ -1,0 +1,1 @@
+"use strict";!function(e){console.log("jQuery "+e().jquery+" is firing. Start!"),console.log("test4"),console.log("jQuery "+e().jquery+" is firing. End!")}(jQuery);

@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <title>{% block title %}{% endblock %}</title>
+  </head> 
+  <body class="bg-c-black text-c-white"> 
+    {% include "theme/header.html" %}
+    
+    <div class="wrapper bg-light text-dark">
+        <div class="cot-container container pt-3 pb-3">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    
+    {% include "theme/footer.html" %}
+    <!-- JavaScript -->
+    <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
+    <script src="{% static 'js/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/javascript.js' %}"></script> 
+    <script src="{% static 'js/home.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+@font-face { // icon fonts from https://icomoon.io/
+  font-family: '#{$c-font-name}';  
+  src:url('../fonts/#{$c-font-name}.eot');
+  src:url('../fonts/#{$c-font-name}.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/#{$c-font-name}.woff') format('woff'),
+  url('../fonts/#{$c-font-name}.ttf') format('truetype'),
+  url('../fonts/#{$c-font-name}.svg#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.visuallyhidden {
+  @extend %visuallyhidden;
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+html {
+  font-size: ($base-font-size/16) * 100%;
+  line-height: 1.4;
+}
+
+body {
+  @extend %body-font;
+  color: $c-black;
+  background-color: $c-white;
+  min-width: 320px;
+}
+
+*:focus {
+  outline: dotted 2px $c-black;
+}
+
+h1, h2, h3, h4, h5, h6, th, .component-title {
+  @extend %heading-font;
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+}
+
+h1,
+.title {
+  @include fontsize(42);
+}
+h2,
+.component-title {
+  @include fontsize(30);
+}
+h3 {
+  @include fontsize(26);
+}
+h4 {
+  @include fontsize(24);
+}
+h5 {
+  @include fontsize(22);
+}
+h6 {
+  @include fontsize(18);
+}

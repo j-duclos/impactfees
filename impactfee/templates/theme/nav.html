@@ -1,0 +1,25 @@
+<nav class="cot-navbar navbar navbar-expand-lg navbar-dark bg-c-black text-c-white">
+    <div class="cot-container container">
+      <div class="tucsonaz-site-logo navbar-brand"><a class="tucsonaz-site-logo-link" href="https://www.tucsonaz.gov/">tucsonaz.gov</a></div>
+    
+      <button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav text-right">
+            
+          <li class="nav-item">    
+            <a class="nav-link text-c-white" href="{% url 'calc' %}">Service Area Calculator</a> 
+          </li>
+          <li>
+            <a class="nav-link text-c-white" href="{% url 'about' %}">About</a>
+          </li>
+          <li>
+            <a class="nav-link text-c-white" href="{% url 'contact' %}">Contact</a> 
+          </li>
+            
+        </ul>
+      </div>
+    </div>
+</nav>

@@ -1,0 +1,273 @@
+@media (min-width: 1600px) {
+  .cot-container {
+      max-width: 1540px;
+  } 
+}   
+
+.component-title {
+  margin: 1em 0;
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    max-width: 250px;
+    border-bottom: 5px solid $c-off-black;
+  }   
+} 
+
+.header {
+  background-color: $c-black;
+  border-bottom: 1px solid $c-black;
+}
+
+.header-content-wrapper {
+  @extend .container;
+}
+.heading-font {
+  @extend %heading-font;
+}
+.body-font {
+  @extend %body-font;
+}
+
+// Colors
+$cot-navbar-bg-color: $c-black;
+$cot-navbar-dot-color: $c-off-black;
+
+// Dimensions
+$cot-navbar-dot-size: 1px;
+$cot-navbar-dot-space: 5px;
+
+.cot-navbar {
+    border-bottom: 2px solid $c-tucson-blue;
+    box-shadow: 0 0 5px rgba($c-black, 0.8),
+                0 0 0 transparent; 
+}
+
+footer {
+    border-top: 2px solid #0d3e77;
+    box-shadow: 0 0 0 transparent, 
+                0 0 5px rgba($c-black, 0.8); 
+}
+
+.tucsonaz-site-logo-wrapper {
+  @extend .col-4;
+  @extend .align-items-center;
+}
+
+h1.tucsonaz-site-logo,
+div.tucsonaz-site-logo {
+  @include fontsize(30);
+  @extend %heading-font;
+  font-weight: 400;
+  padding: 0 0 .25em 0;
+  margin: 0;
+}
+
+.tucsonaz-site-logo-link {
+  display: flex;
+  line-height: 48px;
+  color: $c-off-white;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $c-off-white;
+  }
+
+  &:focus {
+    outline: 2px dotted $c-white;
+  }
+
+}
+
+.header {
+  position: relative;
+  z-index: 5;
+}
+
+.footer-social-media .nav-item,
+.footer-menu .nav-item {
+    padding: 0;
+    list-style-type: none; 
+} 
+
+.footer-menu .nav-link {
+    @include fontsize(16);
+    padding: 0;    
+    text-decoration: underline;
+    &:hover, &:focus {
+        text-decoration: none;        
+    }
+}
+
+.footer-logo .footer-logo-link {
+    background: url(../images/cot-logo.png);
+    background: none, url(../images/cot-logo.svg);
+    content: "";
+    display: inline-block;
+    width: 135px;
+    height: 200px;
+    background-size: 135px 200px;
+    padding-right: .15em;
+    background-repeat: no-repeat;
+}
+
+.nav-link.social-media-icon {
+    padding: .5rem .5rem;
+}
+
+.social-media-icon {
+    cursor: pointer;
+    font-size: 0;
+    font-size: 0;
+    text-decoration: none;
+    &:after {
+        @include fontsize(22);
+        display: inline-block;
+        background-color: $c-off-white;
+        color: #333;
+        border-radius: 50%;
+        padding: .5em;
+    }
+    &:hover:after {
+        transition: background-color,color .5s ease;
+        color: $c-off-white;
+        background-color: $c-tucson-blue;
+    }
+}
+
+.icon-email {
+    @extend %icon;
+    &:after {
+        @extend %mail-icon;    
+    }    
+}
+.icon-facebook {
+    @extend %icon;
+    &:after {
+        @extend %facebook-icon;    
+    }    
+}
+.icon-twitter {
+    @extend %icon;
+    &:after {
+        @extend %twitter-icon;    
+    }    
+}
+.icon-youtube {
+    @extend %icon;
+    &:after {
+        @extend %youtube-icon;    
+    }    
+}
+.icon-instagram {
+    @extend %icon;
+    &:after {
+        @extend %instagram-icon;    
+    }    
+}
+.icon-nextdoor {
+    @extend %icon;
+    &:after {
+        @extend %nextdoor-icon;    
+    }
+}
+
+
+.style-guide-color-box {
+    display: block;
+    width: 85px;
+    height: 85px;
+    border: 5px solid $c-white;
+    box-shadow: 0 0 5px 1px $c-light-grey;
+    margin-bottom: 0.5em;
+}
+
+.small-color-box {
+  width: 75px;
+  height: 75px;
+  min-width: 75px;
+  min-height: 75px;
+  margin-right: 0.5em;
+}
+
+.row.small-color-box-row .col-sm {
+  display: flex;
+  margin-right: 0.25em;
+  margin-top: 1.5em;
+}
+
+.typograpy-description {
+  @include fontsize(12);
+  color: $c-light-grey;
+  margin-bottom: 1em;
+}
+
+.dark-card,
+.light-card {
+  padding: 1em 0 .05em 0;
+  margin: 1em 0 1em 0;
+  border: 5px solid $c-white;
+}
+
+.dark-card {
+  color: $c-off-white;
+  background-color: $c-off-black;
+}
+
+.light-card {
+  color: $c-off-black;
+  background-color: $c-off-white;
+}
+
+*:focus {
+  outline: dotted 2px $c-black;
+} 
+
+a {
+  color: $c-black;
+  text-decoration: underline;
+  &:hover,
+  &:focus {
+    color: $c-medium-tucson-blue;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: dotted 2px $c-black;
+  }
+}
+a.dark {
+  color: $c-white;
+  &:hover,
+  &:focus {
+    color: $c-light-tucson-blue;
+  }
+
+  &:focus {
+    outline: dotted 2px $c-white;
+  }
+}
+
+.logo-example-32 { width: 32px; height: 32px; }
+.logo-example-48 { width: 48px; height: 48px; }
+.logo-example-64 { width: 64px; height: 64px; }
+.logo-example-80 { width: 80px; height: 80px; }
+.logo-example-96 { width: 96px; height: 96px; }
+.logo-example-112 { width: 112px; height: 112px; }
+.logo-example-128 { width: 128px; height: 128px; }
+.logo-example-144 { width: 144px; height: 144px; }
+.logo-example-160 { width: 160px; height: 160px; }
+.logo-example-176 { width: 176px; height: 176px; }
+.logo-example-192 { width: 192px; height: 192px; }
+.logo-example-208 { width: 208px; height: 208px; }
+.logo-example-224 { width: 224px; height: 224px; }
+.logo-example-240 { width: 240px; height: 240px; }
+.logo-example-256 { width: 256px; height: 256px; }

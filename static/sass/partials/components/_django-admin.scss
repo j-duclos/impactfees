@@ -1,0 +1,56 @@
+.cot-admin {
+    
+    #container {
+        background-color: $c-black;
+        color: $c-white; 
+    }
+    
+    .breadcrumbs,
+    #header {
+        @extend .container;
+        @extend .cot-container;
+        background: $c-black;
+        color: $c-white; 
+    }
+    
+    .breadcrumbs {
+        border-top: 1px solid $c-dark-grey;
+    }
+    
+    #branding h1, 
+    #branding h1 a:link, 
+    #branding h1 a:visited {
+        @include fontsize(30);
+        @extend %heading-font;
+        font-weight: 400; 
+        color: $c-white;
+    } 
+    
+    #main {
+        background-color: $c-white;
+        color: $c-black;
+    }
+    
+    #content {
+        width: auto;
+    }
+    
+    .module h2, 
+    .module caption, 
+    .inline-group h2 {
+        background-color: $c-tucson-blue;
+    }
+    .selector .selector-available h2 {
+        color: $c-off-white;
+    }
+    .button.default, 
+    input[type=submit].default, 
+    .submit-row input.default {
+        background: $c-saguaro-green;
+        &:hover {
+            background: $c-light-saguaro-green;
+            color: $c-white;
+        }
+    }
+    
+}

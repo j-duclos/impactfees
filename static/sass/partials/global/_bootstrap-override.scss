@@ -1,0 +1,214 @@
+img {
+
+}
+
+thead {
+  @extend .thead-light;
+}
+
+.form-item {
+  @extend .form-group;
+}
+
+label {
+  @extend %bold;
+  margin: 0;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  @extend .form-control;
+  padding: .375rem 0.25rem;
+  border: 1px solid $c-tucson-blue;
+  border-radius: 0;
+}
+
+button,
+a.button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  @include card(1);
+  @extend .btn;
+  @extend .btn-primary;
+  @extend %bold;
+  padding: .375rem 1.75rem;
+  border-radius: 0;
+  border: none;
+  &:hover,
+  &:focus {
+    @include card(2);
+    color: $c-black;
+    background-color: $c-light-tucson-blue;
+  }
+}
+
+.form-type-radio,
+.form-type-checkbox {
+  @extend .form-check;
+  label.option {
+    @extend .form-check-label;
+  }
+  .form-radio,
+  .form-checkbox {
+    @extend .form-check-input;
+  }
+}
+
+fieldset,
+.field-group-fieldset {
+  @extend .card;
+  border: none;
+  legend {
+    @extend .card-header;
+    border-top: 1px solid rgba($c-black, 0.125);
+    border-right: 1px solid rgba($c-black, 0.125);
+    border-left: 1px solid rgba($c-black, 0.125);
+    border-bottom: 1px solid rgba($c-black, 0.125);
+    background-color: $gray-200;
+  }
+  .form-composite > legend {
+    @extend .card-header;
+  }
+  .fieldset-wrapper {
+    @extend .card-body;
+    border-top: none;
+    border-right: 1px solid rgba($c-black, 0.125);
+    border-left: 1px solid rgba($c-black, 0.125);
+    border-bottom: 1px solid rgba($c-black, 0.125);
+  }
+}
+
+$c-checkbox-bg: $c-off-white;
+.styled-radio,
+.styled-checkbox {
+  // https://codepen.io/spacemonkey/pen/vmZROv
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba($c-tucson-blue, 0.25);
+    background: $c-checkbox-bg;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: $c-tucson-blue;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba($c-tucson-blue, 0.25);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: $c-tucson-blue;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: $c-checkbox-bg;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+        2px 0 0 $c-checkbox-bg,
+        4px 0 0 $c-checkbox-bg,
+        4px -2px 0 $c-checkbox-bg,
+        4px -4px 0 $c-checkbox-bg,
+        4px -6px 0 $c-checkbox-bg,
+        4px -8px 0 $c-checkbox-bg;
+    transform: rotate(45deg);
+  }
+}
+.styled-radio {
+  & + label:before {
+    border-radius: 50%;
+  }
+  &:checked + label:after {
+    left: 5px;
+    top: 5px;
+    background: $c-checkbox-bg;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+.tips {
+  padding-left: 40px;
+}
+
+blockquote {
+  @extend .blockquote;
+  @include fontsize(24);
+  position: relative;
+  margin: 1em 0;
+  padding: .75em 1em .75em 4em;
+  border-left: 5px solid rgba($c-tucson-blue, 0.25);
+  color: $c-off-black;
+  line-height: 1.4;
+  &:before {
+    @include fontsize(140);
+    top: -16px;
+    left: 0;
+    position: absolute;
+    margin: 0 16px;
+    padding: 0;
+    display: inline-block;
+    text-align: center;
+    width: 64px;
+    color: $c-tucson-blue;
+    content: "“";
+  }
+}
+
+.card-header {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+}

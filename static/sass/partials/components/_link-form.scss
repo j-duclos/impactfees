@@ -1,0 +1,24 @@
+.cot-link-form {
+    text-align: center;
+    label {
+        display: block;
+        margin-bottom: 1em;
+    }
+    input[type="text"] {
+        width: 50%;
+        display: inline-block;
+        margin-left: 1em;
+    }
+    input[type="submit"]{
+        display: block;
+        margin: 1em auto;
+    }
+    .description {
+        @include fontsize(14);
+        color: $c-dark-grey;
+        width: 50%;
+        margin: 0.5em auto;
+        border-top: 1px solid $c-dark-grey;
+        padding: 0.5em;
+    }
+}

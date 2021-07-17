@@ -1,0 +1,100 @@
+// Colors
+$c-black: #000000;
+$c-white: #ffffff;
+$c-tucson-blue: #0D3E77;
+$c-off-white: #EFEFEF;
+$c-off-black: #333333;
+$c-dark-grey: #555555;
+$c-grey: #777777;
+$c-light-grey: #999999;
+$c-saguaro-green: #4B853D;
+$c-sonoran-sand: #F5DC9F;
+$c-sunset-red: #D64236;
+$c-light-tucson-blue: #A4C9F4;
+$c-medium-tucson-blue: #1254A1;
+$c-dark-tucson-blue: #0F2F51;
+$c-dark-sonoran-sand: #D0A96D;
+$c-light-saguaro-green: #6CAD34;
+$c-light-sunset-red: #ED5C30;
+$c-flat-blue: #194C6B;
+$c-hover-flat-blue: #236995;
+$c-light-purple: #6D40A5;
+$c-hover-light-purple: #875abf;
+$c-dark-green: #2A4810;
+$c-hover-dark-green: #427119;
+$c-dark-purple: #1C2556;
+$c-hover-dark-purple: #28347b;
+
+// Base Font Size
+$base-font-size: 16;
+
+// The max-width of the stage on full desktop in pixels (see mixin stagecenter)
+$max-stage-width: 1200;
+
+$theme-colors: (
+  "primary": $c-tucson-blue,
+  "secondary": $c-flat-blue,
+  "success": $c-saguaro-green,
+  "danger": $c-sunset-red,
+  "warning": $c-sonoran-sand,
+  "info": $c-light-purple,
+  "light": $c-off-white,
+  "dark": $c-off-black,
+  "c-black": $c-black,
+  "c-white": $c-white,
+  "c-tucson-blue": $c-tucson-blue, 
+  "c-off-white": $c-off-white,
+  "c-off-black": $c-off-black,
+  "c-dark-grey": $c-dark-grey,
+  "c-grey": $c-grey,
+  "c-light-grey": $c-light-grey,
+  "c-saguaro-green": $c-saguaro-green,
+  "c-sonoran-sand": $c-sonoran-sand,
+  "c-sunset-red": $c-sunset-red,
+  "c-light-tucson-blue": $c-light-tucson-blue,
+  "c-medium-tucson-blue": $c-medium-tucson-blue,
+  "c-dark-tucson-blue": $c-dark-tucson-blue,
+  "c-dark-sonoran-sand": $c-dark-sonoran-sand,
+  "c-light-saguaro-green": $c-light-saguaro-green,
+  "c-light-sunset-red": $c-light-sunset-red,
+  "c-flat-blue": $c-flat-blue,
+  "c-hover-flat-blue": $c-hover-flat-blue,
+  "c-light-purple": $c-light-purple,
+  "c-hover-light-purple": $c-hover-light-purple,
+  "c-dark-green": $c-dark-green,
+  "c-hover-dark-green": $c-hover-dark-green,
+  "c-dark-purple": $c-dark-purple,
+  "c-hover-dark-purple": $c-hover-dark-purple,
+);
+
+// Function to convert pixels to ems
+@function px-to-em($px, $denominator: $base-font-size) {
+  @return $px / $denominator * 1em;
+}
+
+// Breakpoints
+$bp-tiny: px-to-em(320);
+$bp-360: px-to-em(360);
+$bp-375: px-to-em(375);
+$bp-small: px-to-em(500);
+$bp-600: px-to-em(600);
+$bp-615: px-to-em(615);
+$bp-med: px-to-em(768);
+$bp-800: px-to-em(800);
+$bp-900: px-to-em(900);
+$bp-1024: px-to-em(1024);
+$bp-1150: px-to-em(1150);
+$bp-1215: px-to-em(1215);
+$bp-1280: px-to-em(1280);
+$bp-1366: px-to-em(1366);
+$bp-1440: px-to-em(1440);
+$bp-1600: px-to-em(1600);
+$bp-1920: px-to-em(1920);
+
+// Bootstrap specific breakpoints
+$bp-bst-sm: px-to-em(768);
+$bp-bst-med: px-to-em(992);
+$bp-bst-lg: px-to-em(1200);
+
+// Define the icon font name
+$c-font-name: 'cot-icons';

@@ -1,0 +1,23 @@
+/**
+ * For the best results with embedding encourage content editors to use http://embedresponsively.com/
+ */
+.movie-wrapper,
+.youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 2em;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

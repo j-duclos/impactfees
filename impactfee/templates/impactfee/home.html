@@ -1,0 +1,48 @@
+{% extends "impactfee/base.html" %} 
+{% load humanize %} 
+
+{% block title %} Impact Fees {% endblock title %}
+
+{% block content %}
+{% load static %}
+
+<div class="row">
+    <div class="col-xl-5">
+        <h3>Service Area Calculator</h3>
+        <form method="post" action="" id="serviceAreaCalculatorForm" name="serviceAreaCalculatorForm" sub_types_url="{% url 'ajax_load_types' %}">
+            {% csrf_token %}
+            {{form}}
+            <br>
+            <button id="calc-btn" class="calc-btns" type="Submit" aria-label="Calculate Fees">Calculate</button>
+        </form>
+    </div>    
+        
+    <div class="col-xl-7">
+        <h3>Service Areas</h3>
+        <div id="service-area-map-image">
+            <img class="center" src="{% static 'images/ImpactFeeAreas.png' %}">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="fee-disclaimer" class="col-xl-12 align-middle">
+        <br>
+        <div class="disclaimer">
+            <strong>Disclaimer</strong><br />
+            This calculator is for illustrative purposes only and may not represent the actual fees charged.
+            The City does not guarantee the accuracy of fees determined by this online calculator since they
+            are dependent on the accuracy of the information put into the calculator, the adopted fees in
+            place at the time the calculator is used (which potentially could change prior to the time fees are
+            actually assessed and paid), the accuracy of this calculator, and system problems associated with
+            data transmission over the internet. The actual fee charged can only be determined at the time
+            payment is due.
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %} 

@@ -1,0 +1,28 @@
+# Django #
+*.log
+*.pot
+*.pyc
+
+# Environments 
+.env
+env
+env/* 
+
+# Backup files # 
+*.bak 
+
+# CORE #
+core/__pycache__/*
+core/settings.py
+core/wsgi.py
+core/*/__pycache__/*
+
+# PRO #
+impactfee/__pycache__/*
+impactfee/migrations/__pycache__/*
+impactfee/*/__pycache__/*
+impactfee/logs/*
+
+# PYCHARM #
+.idea/workspace.xml
+.idea/tasks.xml

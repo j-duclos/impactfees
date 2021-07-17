@@ -1,0 +1,242 @@
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+%visuallyhidden {
+  @include visuallyhidden();
+}
+
+%visuallyshow {
+  @include visuallyshow();
+}
+
+//
+// Fonts
+//
+%heading-font {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+%body-font {
+  font-family: 'Montserrat', Tahoma, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+//
+// Font Styling
+//
+%bold {
+  font-weight: 900;
+}
+
+%italic {
+  font-style: italic;
+}
+
+//
+// Icons
+//
+%icon {
+  font-family: '#{$c-font-name}';  // font name is defined in the variables partial
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  speak: none;
+}
+
+%close-icon {
+  @extend %icon;
+  content: "\e600";
+}
+
+%sub-menu-icon {
+  @extend %icon;
+  content: "\e601";
+}
+
+%bike-maps-icon {
+  @extend %icon;
+  content: "\e602";
+}
+
+%calendar-icon {
+  @extend %icon;
+  content: "\e603";
+}
+
+%contacts-icon {
+  @extend %icon;
+  content: "\e60e";
+}
+
+%cot-logo-icon {
+  @extend %icon;
+  content: "\e617";
+}
+
+%court-icon {
+  @extend %icon;
+  content: "\e61c";
+}
+
+%court-calendar-icon {
+  @extend %icon;
+  content: "\e61d";
+}
+
+%down-arrow-icon {
+  @extend %icon;
+  content: "\e61e";
+}
+
+%right-arrow-icon {
+  @extend %icon;
+  content: "\e61f";
+}
+
+%left-arrow-icon {
+  @extend %icon;
+  content: "\e620";
+}
+
+%up-arrow-icon {
+  @extend %icon;
+  content: "\e621";
+}
+
+%facebook-icon {
+  @extend %icon;
+  content: "\e622";
+}
+
+%government-icon {
+  @extend %icon;
+  content: "\e623";
+}
+
+%housing-icon {
+  @extend %icon;
+  content: "\e624";
+}
+
+%human-resources-icon {
+  @extend %icon;
+  content: "\e625";
+}
+
+%instagram-icon {
+  @extend %icon;
+  content: "\e62c";
+}
+
+%nextdoor-icon {
+  @extend %icon;
+  content: "\e902"; 
+}
+
+%mail-icon {
+  @extend %icon;
+  content: "\e62d";
+}
+
+%menu-icon {
+  @extend %icon;
+  content: "\e62e";
+}
+
+%police-contacts-icon {
+  @extend %icon;
+  content: "\e62f";
+}
+
+%police-reports-icon {
+  @extend %icon;
+  content: "\e630";
+}
+
+%policies-directives-icon {
+  @extend %icon;
+  content: "\e631";
+}
+
+%pro-icon {
+  @extend %icon;
+  content: "\e649";
+}
+
+%retirement-icon {
+  @extend %icon;
+  content: "\e64a";
+}
+
+%search-icon {
+  @extend %icon;
+  content: "\e654";
+}
+
+%time-keeping-icon {
+  @extend %icon;
+  content: "\e655";
+}
+
+%twitter-icon {
+  @extend %icon;
+  content: "\e687";
+}
+
+%user-icon {
+  @extend %icon;
+  content: "\e688";
+}
+
+%water-icon {
+  @extend %icon;
+  content: "\e689";
+}
+
+%youtube-icon {
+  @extend %icon;
+  content: "\e68a";
+}
+
+%newspaper-icon {
+  @extend %icon;
+  content: "\e900";
+}
+
+%chevron-left-icon {
+  @extend %icon;
+  content: "\f053";
+}
+
+%chevron-right-icon {
+  @extend %icon;
+  content: "\f054";
+}
+
+%chevron-up-icon {
+  @extend %icon;
+  content: "\f077";
+}
+
+%chevron-down-icon {
+  @extend %icon;
+  content: "\f078";
+}
+
+%linkedin-icon {
+  @extend %icon;
+  content: "\e901";
+}

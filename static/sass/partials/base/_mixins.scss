@@ -1,0 +1,138 @@
+@mixin svg-bg($name) {
+  background: url(../images/#{$name}.png);
+  background: none, url(../images/#{$name}.svg);
+}
+
+// Function to convert pixels to ems
+@function px-to-em($px, $denominator: $base-font-size) {
+  @return $px / $denominator * 1em;
+}
+
+@mixin fontsize($number) {
+  font-size: $number + px; //this line can be commented out if we're not supporting IE8
+  font-size: $number/$base-font-size + rem;
+}
+
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin visuallyshow {
+  border: inherit;
+  clip: inherit;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  position: static;
+  width: auto;
+}
+
+/**
+ *
+ * This method returns the content wrapped in the requested media query. It also checks to see if
+ * the no-query variable has been defined. If the variable exists the content is output and wrapped
+ * in a class as defined by the variable.
+ *
+ * The $no-query defined class is to wrap content in when there are no media queries available for
+ * the current browser. This is typically provided by a javascript plugin like modernizr.
+ *
+ * $bp: The breakpoint in pixels
+ *
+ * $no-ie: To override this breakpoint and not use it in browsers that don't support media queries
+ * pass true as the second argument.
+ *
+ */
+@mixin breakpoint($bp, $no-ie: false) {
+
+  // Pass the given content and wrap it in a min-width media query
+  @media (min-width: #{$bp}) {
+    // The content contained within the call to our mixin
+    @content;
+  }
+
+  // Check to see if we have defined the no-query variable
+  @if variable-exists(no-query) and $no-ie == false {
+    // If media queries are not available we wrap the content in this class
+    #{$no-query} & {
+      // The content contained within the call to our mixin
+      @content;
+    }
+  }
+
+}
+
+/* CSS Tricks - https://css-tricks.com/snippets/sass/material-shadows-mixin/ */
+/**
+ * Computes a top-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+@function top-shadow($depth) {
+  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+  $color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/**
+ * Computes a bottom-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+@function bottom-shadow($depth) {
+  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+  $blur: nth(1 3 3 5 6, $depth) * 4px;
+  $color: rgba(black, nth(.24 .23 .23 .22 .22, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/**
+ * Gives a card depth effect.
+ *
+ * @param {Number} $depth - depth level (between 1 and 5)
+ *
+ * @link https://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+ *
+ * @requires {function} top-shadow
+ * @requires {function} bottom-shadow
+ */
+@mixin card($depth) {
+  @if $depth < 1 {
+    box-shadow: none;
+  } @else if $depth > 5 {
+    @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+  } @else {
+    box-shadow: bottom-shadow($depth), top-shadow($depth);
+  }
+}
+
+/* Define generic classes for cards */
+.card-1 {
+  @include card(1);
+}
+.card-2 {
+  @include card(2);
+}
+.card-3 {
+  @include card(3);
+}
+.card-4 {
+  @include card(4);
+}
+.card-5 {
+  @include card(5);
+}
