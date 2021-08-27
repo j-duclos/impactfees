@@ -9,7 +9,7 @@ Author:
 
 Installation Instructions:
 
-$ git clone https://github.com/tucsonaz/ImpactFees2021.git
+$ git clone https://github.com/jduclos1/impactfees.git
 
 On a fresh repository clone you will need to do the following:
 Create The Virtual Environment (ENV)
@@ -85,19 +85,19 @@ TEMPLATES = [
 
 
 
-DATABASES�=�{
-	'default':�{
-	'ENGINE':�'django.db.backends.mysql',
-	'NAME':�'dbname',
-	'USER':�'username',
-	'PASSWORD':�'password',
-	'HOST':�'hostname',
-	'PORT':�'3306',
+DATABASES = {
+	'default': {
+	'ENGINE': 'django.db.backends.mysql',
+	'NAME': 'dbname',
+	'USER': 'username',
+	'PASSWORD': 'password',
+	'HOST': 'hostname',
+	'PORT': '3306',
 	}
 }
 
-STATIC_URL�=�'/static/'
-MEDIA_ROOT�=�os.path.join(BASE_DIR,�'static/images')
-STATICFILES_DIRS�=�[BASE_DIR,�'static']
+STATIC_URL='/static/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'static/images')
+STATICFILES_DIRS=[BASE_DIR,'static']
 
-DEFAULT_AUTO_FIELD =�'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD ='django.db.models.BigAutoField'
